@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evyol Group: Digital Market & Growth Strategy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F7F9FB;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 50vh;
+        }
+        .small-chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 40vh;
+        }
+        .kpi-card {
+            background-color: #FFFFFF;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .kpi-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+        .kpi-label {
+            font-size: 0.875rem;
+            color: #555;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+            <h1 class="text-3xl font-bold" style="color: #073B4C;">Evyol Group: Digital Market & Growth Strategy</h1>
+            <p class="mt-1 text-lg" style="color: #118AB2;">An analysis of digital opportunities in Pest Management & Agriculture.</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-4 md:p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <section class="md:col-span-2 lg:col-span-3 bg-white rounded-lg shadow-md p-6 mb-6">
+                <h2 class="text-2xl font-bold mb-4" style="color: #073B4C;">Executive Summary & Business Overview</h2>
+                <p class="text-base text-gray-700 mb-6">
+                    Evyol Group operates a diversified business model, prominently split between an Agri Division (Crop Protection, Nutrition, Seeds) and an Urban Pest Management Division. Analysis of digital search data, keyword forecasts, and market trends reveals a significant and immediate growth opportunity. The Urban Pest Management sector shows high, transactional search intent, especially on mobile devices. In contrast, the Agri sector's digital footprint is smaller, suggesting a B2B or distributor-focused model rather than direct-to-consumer search.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                    <div class="kpi-card">
+                        <div class="kpi-value" style="color: #118AB2;">48K+</div>
+                        <div class="kpi-label">Total Avg. Monthly Searches (Tracked Keywords)</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-value" style="color: #06D6A0;">67.5K</div>
+                        <div class="kpi-label">Est. Monthly Ad Impressions (Dec 2025)</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-value" style="color: #FFD166;">45</div>
+                        <div class="kpi-label">Est. Monthly Conversions (at $30/day)</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-value" style="color: #FF6B6B;">91%</div>
+                        <div class="kpi-label">Forecasted Ad Clicks from Mobile</div>
+                    </div>
+                </div>
+                <div class="small-chart-container">
+                    <canvas id="businessDivisionsChart"></canvas>
+                </div>
+                <p class="text-center text-gray-600 mt-2">Digital market analysis highlights a clear strategic imperative: focus digital lead generation efforts on the high-demand Urban Pest Management sector.</p>
+            </section>
+
+            <section class="md:col-span-2 lg:col-span-3 bg-white rounded-lg shadow-md p-6 mb-6">
+                <h2 class="text-2xl font-bold mb-4" style="color: #073B4C;">The Digital Landscape: Pest vs. Agri</h2>
+                <p class="text-base text-gray-700 mb-6">
+                    Google Trends data from the past five years in Pakistan starkly illustrates the difference in public search interest. "Pest Control" and "Termite Treatment" command consistent, high-volume search traffic with seasonal peaks. In contrast, search terms for the Agri Division ("Agro Chemicals," "Hybrid Seeds") are near zero. This confirms the Urban Pest Management sector is where active, digital-native customers are searching for solutions.
+                </p>
+                <div class="chart-container">
+                    <canvas id="trendsChart"></canvas>
+                </div>
+            </section>
+
+            <section class="md:col-span-2 lg:col-span-3 bg-white rounded-lg shadow-md p-6 mb-6">
+                <h2 class="text-2xl font-bold mb-4" style="color: #073B4C;">Deep Dive: Urban Pest Management Market</h2>
+                <p class="text-base text-gray-700 mb-6">
+                    The pest control market is not only active but also competitive. High-intent keywords like "termite and pest control" and "fumigation services" boast high search volumes. Competition for transactional, local keywords (e.g., "termite control near me") is medium to high, with corresponding top-of-page bids exceeding $3.00, indicating a high customer lifetime value.
+                </p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="flex flex-col justify-between">
+                        <p class="text-lg font-semibold text-gray-800 text-center mb-4">Top Keywords by Search Volume</p>
+                        <div class="small-chart-container" style="height: 350px;">
+                            <canvas id="keywordsChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-between">
+                         <p class="text-lg font-semibold text-gray-800 text-center mb-4">Keyword Value Analysis (Volume vs. CPC vs. Competition)</p>
+                        <div class="small-chart-container" style="height: 350px;">
+                            <canvas id="keywordBubbleChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="md:col-span-2 lg:col-span-3 bg-white rounded-lg shadow-md p-6 mb-6">
+                <h2 class="text-2xl font-bold mb-4" style="color: #073B4C;">Google Ads Performance & Forecast</h2>
+                <p class="text-base text-gray-700 mb-6">
+                    A forecasted daily budget of $30 ($930/month) is projected to generate ~45 conversions at a $21 CPA. While a solid start, the most critical insight is the traffic source: over 91% of all clicks are expected from mobile devices. This dictates that all digital assets, especially landing pages, must be mobile-first, load instantly, and feature clear, tap-to-call CTAs.
+                </p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="flex flex-col justify-between">
+                        <p class="text-lg font-semibold text-gray-800 text-center mb-4">December 2025 Ad Spend Forecast</p>
+                        <div class="small-chart-container" style="height: 350px;">
+                            <canvas id="adsForecastChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-between">
+                         <p class="text-lg font-semibold text-gray-800 text-center mb-4">Forecasted Clicks by Device</p>
+                        <div class="small-chart-container" style="height: 350px;">
+                            <canvas id="deviceChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lg:col-span-3 bg-white rounded-lg shadow-md p-6 mb-6">
+                <h2 class="text-2xl font-bold mb-4" style="color: #073B4C;">Competitor Matrix (Digital Share of Voice)</h2>
+                <p class="text-base text-gray-700 mb-6">
+                    The digital market is fragmented. The Agri space is dominated by large national corporations, while the Pest Management space features specialized local and national service providers. Evyol is positioned as a strong challenger with an opportunity to build digital dominance.
+                </p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left table-auto">
+                        <thead>
+                            <tr class="border-b-2" style="border-color: #118AB2;">
+                                <th class="p-3 text-sm font-semibold tracking-wide" style="color: #073B4C;">Competitor</th>
+                                <th class="p-3 text-sm font-semibold tracking-wide" style="color: #073B4C;">Business Focus</th>
+                                <th class="p-3 text-sm font-semibold tracking-wide" style="color: #073B4C;">Est. Digital Position</th>
+                                <th class="p-3 text-sm font-semibold tracking-wide" style="color: #073B4C;">Primary Target</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="bg-gray-50">
+                                <td class="p-3 text-sm text-gray-700">Engro Fertilizers / Fauji Fertilizer</td>
+                                <td class="p-3 text-sm text-gray-700">Agriculture (Fertilizers)</td>
+                                <td class="p-3 text-sm text-gray-700">Market Leader (Agri)</td>
+                                <td class="p-3 text-sm text-gray-700">B2B, Distributors, National</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 text-sm text-gray-700">Suncrop Group</td>
+                                <td class="p-3 text-sm text-gray-700">Agriculture (Crop Protection)</td>
+                                <td class="p-3 text-sm text-gray-700">Strong Challenger (Agri)</td>
+                                <td class="p-3 text-sm text-gray-700">B2B, Farmers</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="p-3 text-sm text-gray-700">Flick Pest Control (flick.com.pk)</td>
+                                <td class="p-3 text-sm text-gray-700">Urban Pest Management</td>
+                                <td class="p-3 text-sm text-gray-700">Strong Challenger (Pest)</td>
+                                <td class="p-3 text-sm text-gray-700">B2C/B2B, Local (Urban)</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 text-sm text-gray-700">Elite Pest Management (elitepest.com.pk)</td>
+                                <td class="p-3 text-sm text-gray-700">Urban Pest Management</td>
+                                <td class="p-3 text-sm text-gray-700">Niche Player (Pest)</td>
+                                <td class="p-3 text-sm text-gray-700">B2C/B2B, Local</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="p-3 text-sm text-gray-700 font-semibold">Evyol Group</td>
+                                <td class="p-3 text-sm text-gray-700 font-semibold">Diversified (Agri + Pest)</td>
+                                <td class="p-3 text-sm text-gray-700 font-semibold">Challenger (Digital)</td>
+                                <td class="p-3 text-sm text-gray-700 font-semibold">B2B (Agri) / B2C (Pest)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="lg:col-span-3 mb-6">
+                <h2 class="text-2xl font-bold mb-6 text-center" style="color: #073B4C;">SWOT Analysis</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-lg shadow-md p-6 border-l-4" style="border-color: #06D6A0;">
+                        <h3 class="text-xl font-bold mb-3" style="color: #06D6A0;">Strengths</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Diversified business model mitigates risk.</li>
+                            <li>Established brand and physical distribution network.</li>
+                            <li>Covers both high-value B2B (Agri) and high-volume B2C (Pest) markets.</li>
+                            <li>Basic SEO (Yoast) and Analytics (GA4) are in place.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 border-l-4" style="border-color: #FF6B6B;">
+                        <h3 class="text-xl font-bold mb-3" style="color: #FF6B6B;">Weaknesses</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Standard WordPress site, likely not optimized for mobile lead-gen.</li>
+                            <li>Digital strategy appears unfocused, blending two distinct markets.</li>
+                            <li>Low digital search visibility for the high-value Agri division.</li>
+                            <li>No clear, dedicated landing pages for high-intent pest keywords.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 border-l-4" style="border-color: #FFD166;">
+                        <h3 class="text-xl font-bold mb-3" style="color: #FFD166;">Opportunities</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Dominate high-intent, local search for "Pest Management."</li>
+                            <li>Capitalize on the 91%+ mobile traffic with mobile-first landing pages.</li>
+                            <li>Implement Local SEO for key cities (Lahore, Karachi, etc.).</li>
+                            <li>Build B2B authority in Agri via content marketing (e.g., "crop guides") instead of direct sales keywords.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 border-l-4" style="border-color: #118AB2;">
+                        <h3 class="text-xl font-bold mb-3" style="color: #118AB2;">Threats</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>High and rising CPC for competitive pest control keywords.</li>
+                            <li>Large national players (Engro, Fauji) dominate the Agri market.</li>
+                            <li>Aggressive local pest control competitors focusing on digital.</li>
+                            <li>Poor mobile experience could lead to high bounce rates and wasted ad spend.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="lg:col-span-3 bg-white rounded-lg shadow-md p-6 mb-6">
+                <h2 class="text-2xl font-bold mb-6 text-center" style="color: #073B4C;">Recommended Digital Growth Strategy</h2>
+                <p class="text-base text-gray-700 mb-8 text-center max-w-3xl mx-auto">
+                    The path to digital growth is clear: a focused, dual-pronged strategy that separates B2C lead generation from B2B authority building. The immediate revenue opportunity lies in capturing the high-intent Urban Pest Management market.
+                </p>
+                
+                <div class="flex flex-col md:flex-row justify-center items-center md:items-start gap-6">
+                    
+                    <div class="w-full md:w-2/5 border-2 rounded-lg p-5" style="border-color: #118AB2;">
+                        <h3 class="text-xl font-bold text-center mb-4" style="color: #118AB2;">Focus 1: Dominate Pest Management (Lead Gen)</h3>
+                        <div class="space-y-4">
+                            <div class="p-3 bg-gray-50 rounded-md shadow-sm">
+                                <h4 class="font-semibold" style="color: #073B4C;">Paid Ads (Google)</h4>
+                                <p class="text-sm text-gray-700">Run geo-targeted campaigns for "termite control lahore," "pest control near me."</p>
+                            </div>
+                             <div class="text-2xl text-center font-semibold" style="color: #118AB2;">&darr;</div>
+                            <div class="p-3 bg-gray-50 rounded-md shadow-sm">
+                                <h4 class="font-semibold" style="color: #073B4C;">Mobile-First Landing Pages</h4>
+                                <p class="text-sm text-gray-700">Create fast, simple pages (not the main site) with "Get a Quote" & "Call Now" CTAs.</p>
+                            </div>
+                             <div class="text-2xl text-center font-semibold" style="color: #118AB2;">&darr;</div>
+                            <div class="p-3 bg-gray-50 rounded-md shadow-sm">
+                                <h4 class="font-semibold" style="color: #073B4C;">Local SEO</h4>
+                                <p class="text-sm text-gray-700">Optimize Google Business Profile. Build city-specific service pages.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full md:w-2/5 border-2 rounded-lg p-5" style="border-color: #06D6A0;">
+                        <h3 class="text-xl font-bold text-center mb-4" style="color: #06D6A0;">Focus 2: Build Agri Authority (B2B)</h3>
+                        <div class="space-y-4">
+                            <div class="p-3 bg-gray-50 rounded-md shadow-sm">
+                                <h4 class="font-semibold" style="color: #073B4C;">Content Marketing (Blog/Guides)</h4>
+                                <p class="text-sm text-gray-700">Target farmer research queries: "how to control wheat rust," "best cotton fertilizer schedule."</p>
+                            </div>
+                             <div class="text-2xl text-center font-semibold" style="color: #06D6A0;">&darr;</div>
+                            <div class="p-3 bg-gray-50 rounded-md shadow-sm">
+                                <h4 class="font-semibold" style="color: #073B4C;">Authority Building (SEO)</h4>
+                                <p class="text-sm text-gray-700">Become the go-to resource for Pakistani farmers, building brand trust.</p>
+                            </div>
+                             <div class="text-2xl text-center font-semibold" style="color: #06D6A0;">&darr;</div>
+                            <div class="p-3 bg-gray-50 rounded-md shadow-sm">
+                                <h4 class="font-semibold" style="color: #073B4C;">Capture B2B/Distributor Leads</h4>
+                                <p class="text-sm text-gray-700">Use content to capture emails and inquiries from distributors and large farms.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-bold mt-12 mb-6 text-center" style="color: #073B4C;">Growth Targets (Next 6 Months)</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="kpi-card">
+                        <div class="kpi-value" style="color: #06D6A0;">75-100</div>
+                        <div class="kpi-label">Monthly Pest Control Conversions (from 45)</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-value" style="color: #118AB2;">5-7%</div>
+                        <div class="kpi-label">Paid Search Conversion Rate (from 2.94%)</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-value" style="color: #FFD166;">Top 3</div>
+                        <div class="kpi-label">Local SEO Ranking for "Pest Control" in Lahore</div>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const colors = {
+                vibrantRed: '#FF6B6B',
+                yellow: '#FFD166',
+                green: '#06D6A0',
+                blue: '#118AB2',
+                darkBlue: '#073B4C',
+                gray: '#6B7280'
+            };
+
+            const wrapLabel = (label, maxWidth = 16) => {
+                if (typeof label !== 'string' || label.length <= maxWidth) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + word).length > maxWidth && currentLine.length > 0) {
+                        lines.push(currentLine.trim());
+                        currentLine = word + ' ';
+                    } else {
+                        currentLine += word + ' ';
+                    }
+                }
+                lines.push(currentLine.trim());
+                return lines;
+            };
+            
+            const processLabels = (labels) => labels.map(label => wrapLabel(label));
+
+            const tooltipCallbacks = {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            };
+            
+            const defaultChartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    tooltip: {
+                        callbacks: tooltipCallbacks
+                    },
+                    legend: {
+                        labels: {
+                            color: colors.darkBlue,
+                            font: {
+                                family: 'Inter'
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: {
+                            color: colors.darkBlue,
+                            font: {
+                                family: 'Inter'
+                            }
+                        },
+                        grid: {
+                            display: false
+                        }
+                    },
+                    y: {
+                        ticks: {
+                            color: colors.darkBlue,
+                            font: {
+                                family: 'Inter'
+                            }
+                        },
+                        grid: {
+                            color: '#E5E7EB'
+                        }
+                    }
+                }
+            };
+
+            function initBusinessDivisionsChart() {
+                const ctx = document.getElementById('businessDivisionsChart')?.getContext('2d');
+                if (!ctx) return;
+
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Urban Pest Management (High Digital Demand)', 'Agri Division (Low Digital Demand)'],
+                        datasets: [{
+                            label: 'Business Divisions Digital Focus',
+                            data: [70, 30],
+                            backgroundColor: [
+                                colors.blue,
+                                colors.green
+                            ],
+                            borderColor: '#FFFFFF',
+                            borderWidth: 3
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            tooltip: {
+                                callbacks: tooltipCallbacks
+                            },
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    color: colors.darkBlue,
+                                    font: { family: 'Inter' },
+                                    padding: 20
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            function initTrendsChart() {
+                const ctx = document.getElementById('trendsChart')?.getContext('2d');
+                if (!ctx) return;
+
+                const labels = [
+                    'Q4 2020', 'Q1 2021', 'Q2 2021', 'Q3 2021', 'Q4 2021',
+                    'Q1 2022', 'Q2 2022', 'Q3 2022', 'Q4 2022',
+                    'Q1 2023', 'Q2 2023', 'Q3 2023', 'Q4 2023',
+                    'Q1 2024', 'Q2 2024', 'Q3 2024', 'Q4 2024',
+                    'Q1 2025', 'Q2 2025', 'Q3 2025', 'Q4 2025'
+                ];
+
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'pest control',
+                            data: [29, 25, 34, 45, 30, 28, 38, 50, 32, 29, 40, 52, 35, 31, 42, 55, 38, 33, 45, 58, 40],
+                            borderColor: colors.blue,
+                            backgroundColor: 'rgba(17, 138, 178, 0.1)',
+                            fill: true,
+                            tension: 0.3
+                        }, {
+                            label: 'termite treatment',
+                            data: [0, 0, 15, 30, 12, 0, 18, 33, 14, 0, 20, 35, 16, 0, 22, 38, 18, 0, 25, 40, 20],
+                            borderColor: colors.vibrantRed,
+                            backgroundColor: 'rgba(255, 107, 107, 0.1)',
+                            fill: true,
+                            tension: 0.3
+                        }, {
+                            label: 'Agri (Combined)',
+                            data: [0, 2, 0, 0, 1, 0, 0, 3, 0, 0, 1, 0, 0, 2, 0, 0, 1, 0, 0, 2, 0],
+                            borderColor: colors.gray,
+                            backgroundColor: 'rgba(107, 114, 128, 0.1)',
+                            fill: false,
+                            borderDash: [5, 5]
+                        }]
+                    },
+                    options: defaultChartOptions
+                });
+            }
+
+            function initKeywordsChart() {
+                const ctx = document.getElementById('keywordsChart')?.getContext('2d');
+                if (!ctx) return;
+
+                const rawLabels = [
+                    'termite and pest control', 
+                    'termite control', 
+                    'pest control', 
+                    'fumigation services', 
+                    'termite treatment', 
+                    'termite control near me'
+                ];
+                
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: processLabels(rawLabels),
+                        datasets: [{
+                            label: 'Avg. Monthly Searches',
+                            data: [500, 500, 500, 500, 500, 50],
+                            backgroundColor: [
+                                colors.blue,
+                                colors.green,
+                                colors.yellow,
+                                colors.vibrantRed,
+                                colors.blue,
+                                colors.green
+                            ],
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        ...defaultChartOptions,
+                        indexAxis: 'y',
+                        scales: {
+                            x: { ...defaultChartOptions.scales.x, title: { display: true, text: 'Avg. Monthly Searches', color: colors.darkBlue } },
+                            y: { ...defaultChartOptions.scales.y, grid: { display: false } }
+                        },
+                        plugins: {
+                            ...defaultChartOptions.plugins,
+                            legend: { display: false }
+                        }
+                    }
+                });
+            }
+
+            function initKeywordBubbleChart() {
+                const ctx = document.getElementById('keywordBubbleChart')?.getContext('2d');
+                if (!ctx) return;
+
+                new Chart(ctx, {
+                    type: 'bubble',
+                    data: {
+                        labels: ['termite and pest control', 'termite control near me', 'fumigation services'],
+                        datasets: [{
+                            label: 'termite and pest control',
+                            data: [{ x: 2.65, y: 500, r: 10 }],
+                            backgroundColor: 'rgba(17, 138, 178, 0.7)'
+                        }, {
+                            label: 'termite control near me',
+                            data: [{ x: 3.05, y: 50, r: 20 }],
+                            backgroundColor: 'rgba(255, 107, 107, 0.7)'
+                        }, {
+                            label: 'fumigation services',
+                            data: [{ x: 1.91, y: 500, r: 10 }],
+                            backgroundColor: 'rgba(6, 214, 160, 0.7)'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        const label = context.chart.data.labels[context.datasetIndex];
+                                        const data = context.dataset.data[context.dataIndex];
+                                        const competition = data.r === 10 ? 'Low' : (data.r === 20 ? 'Medium' : 'High');
+                                        return `${label}: (CPC: $${data.x}, Vol: ${data.y}, Comp: ${competition})`;
+                                    }
+                                }
+                            },
+                             legend: { display: false }
+                        },
+                        scales: {
+                            x: { ...defaultChartOptions.scales.x, title: { display: true, text: 'Top of Page Bid (High, $)', color: colors.darkBlue } },
+                            y: { ...defaultChartOptions.scales.y, title: { display: true, text: 'Avg. Monthly Searches', color: colors.darkBlue } }
+                        }
+                    }
+                });
+            }
+
+            function initAdsForecastChart() {
+                const ctx = document.getElementById('adsForecastChart')?.getContext('2d');
+                if (!ctx) return;
+                
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Forecasted Clicks', 'Forecasted Cost ($)', 'Forecasted Conversions'],
+                        datasets: [{
+                            label: 'December 2025 Forecast',
+                            data: [1521, 930, 45],
+                            backgroundColor: [
+                                colors.blue,
+                                colors.vibrantRed,
+                                colors.green
+                            ],
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        ...defaultChartOptions,
+                         scales: {
+                            x: { ...defaultChartOptions.scales.x, grid: { display: false } },
+                            y: { ...defaultChartOptions.scales.y }
+                        },
+                        plugins: {
+                            ...defaultChartOptions.plugins,
+                            legend: { display: false }
+                        }
+                    }
+                });
+            }
+
+            function initDeviceChart() {
+                const ctx = document.getElementById('deviceChart')?.getContext('2d');
+                if (!ctx) return;
+                
+                const total = 1391.65 + 127.21 + 2.01;
+                
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Mobile', 'Desktop', 'Tablet'],
+                        datasets: [{
+                            label: 'Clicks by Device',
+                            data: [1391.65, 127.21, 2.01],
+                            backgroundColor: [
+                                colors.blue,
+                                colors.yellow,
+                                colors.gray
+                            ],
+                            borderColor: '#FFFFFF',
+                            borderWidth: 3
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            tooltip: {
+                                callbacks: {
+                                    ...tooltipCallbacks,
+                                    label: function(context) {
+                                        const label = context.label || '';
+                                        const value = context.parsed;
+                                        const percent = ((value / total) * 100).toFixed(1);
+                                        return `${label}: ${value.toFixed(0)} Clicks (${percent}%)`;
+                                    }
+                                }
+                            },
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    color: colors.darkBlue,
+                                    font: { family: 'Inter' },
+                                    padding: 20
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            initBusinessDivisionsChart();
+            initTrendsChart();
+            initKeywordsChart();
+            initKeywordBubbleChart();
+            initAdsForecastChart();
+            initDeviceChart();
+        });
+    </script>
+</body>
+</html>
